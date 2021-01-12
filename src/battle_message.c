@@ -181,6 +181,8 @@ static const u8 sText_PkmnStoringEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} is stori
 static const u8 sText_PkmnUnleashedEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} unleashed\nenergy!");
 static const u8 sText_PkmnFatigueConfusion[] = _("{B_ATK_NAME_WITH_PREFIX} became\nconfused due to fatigue!");
 static const u8 sText_PlayerPickedUpMoney[] = _("{B_PLAYER_NAME} picked up\n¥{B_BUFF1}!\p");
+static const u8 sText_PkmnPickedUpItem[] = _("One of your POKéMON has\npicked up an item!\p");
+static const u8 sText_PkmnPickedUpItems[] = _("Some of your POKéMON have\npicked up items!\p");
 static const u8 sText_PkmnUnaffected[] = _("{B_DEF_NAME_WITH_PREFIX} is\nunaffected!");
 static const u8 sText_PkmnTransformedInto[] = _("{B_ATK_NAME_WITH_PREFIX} transformed\ninto {B_BUFF1}!");
 static const u8 sText_PkmnMadeSubstitute[] = _("{B_ATK_NAME_WITH_PREFIX} made\na SUBSTITUTE!");
@@ -890,6 +892,8 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_PKMNBOXLANETTESPCFULL - 12] = gText_PkmnTransferredLanettesPCBoxFull,
     [STRINGID_TRAINER1WINTEXT - 12] = sText_Trainer1WinText,
     [STRINGID_TRAINER2WINTEXT - 12] = sText_Trainer2WinText,
+    [STRINGID_PKMNPICKEDUPITEM - 12] = sText_PkmnPickedUpItem,
+    [STRINGID_PKMNPICKEDUPITEMS - 12] = sText_PkmnPickedUpItems,
 };
 
 const u16 gMissStringIds[] =

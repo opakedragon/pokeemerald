@@ -9497,7 +9497,8 @@ static void Cmd_pickup(void)
 {
     s32 i;
     u16 species, heldItem;
-    u8 ability;
+    u8 ability, changedItems;
+    changedItems = 0;
 
     if (InBattlePike())
     {
@@ -9555,16 +9556,27 @@ static void Cmd_pickup(void)
                     if (sPickupProbabilities[j] > rand)
                     {
                         SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sPickupItems[lvlDivBy10 + j]);
+                        changedItems++;
                         break;
                     }
                     else if (rand == 99 || rand == 98)
                     {
                         SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &sRarePickupItems[lvlDivBy10 + (99 - rand)]);
+                        changedItems++;
                         break;
                     }
                 }
             }
         }
+    }
+    
+    if (changedItems == 1)
+    {
+        PrepareStringBattle(STRINGID_PKMNPICKEDUPITEM, 0);
+    }
+    else if (changedItems > 1)
+    {
+        PrepareStringBattle(STRINGID_PKMNPICKEDUPITEMS, 0);
     }
 
     gBattlescriptCurrInstr++;

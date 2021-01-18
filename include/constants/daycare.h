@@ -23,5 +23,6 @@
 // Array buffers
 #define EGG_MOVES_ARRAY_COUNT           10
 #define EGG_LVL_UP_MOVES_ARRAY_COUNT    (MAX_LEVEL_UP_MOVES > 50 ? MAX_LEVEL_UP_MOVES : 50)
+u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves);
 
 #endif //GUARD_DAYCARE_CONSTANTS_H

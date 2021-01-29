@@ -2825,7 +2825,7 @@ BattleScript_EffectCamouflage::
 
 BattleScript_FaintAttacker::
 	playfaintcry BS_ATTACKER
-	pause 0x40
+	pause 0x20
 	dofaintanimation BS_ATTACKER
 	cleareffectsonfaint BS_ATTACKER
 	printstring STRINGID_ATTACKERFAINTED
@@ -2833,7 +2833,7 @@ BattleScript_FaintAttacker::
 
 BattleScript_FaintTarget::
 	playfaintcry BS_TARGET
-	pause 0x40
+	pause 0x20
 	dofaintanimation BS_TARGET
 	cleareffectsonfaint BS_TARGET
 	printstring STRINGID_TARGETFAINTED
